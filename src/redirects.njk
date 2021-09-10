@@ -1,0 +1,7 @@
+---
+permalink: _redirects
+---
+
+{%- for item in news %}
+/   /{{item.country}}   302 Country={{item.country}}
+{%- endfor %}
