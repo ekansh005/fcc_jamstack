@@ -14,3 +14,11 @@ function success(position) {
       document.querySelector("#weather").classList.remove("hidden");
     });
 }
+
+function error(err) {
+  console.error(`Weather API Error: ${err}`);
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+}
