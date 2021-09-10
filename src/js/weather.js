@@ -7,10 +7,11 @@ function success(position) {
     })
     .then((data) => {
       //dom manipulation to update weather information
-      document.querySelector("#area").textContent(`data.name`);
-      document.querySelector("#temp").textContent(`data.main.temp`);
-      document.querySelector("#condition").textContent(`data.weather[0].main`);
-      document.querySelector("#desc").textContent(`data.weather[0].description`);
+      document.querySelector("#area").textContent = data.name;
+      document.querySelector("#temp").textContent = (data.main.temp + " ") & deg;
+      +"C";
+      document.querySelector("#condition").textContent = data.weather[0].main;
+      document.querySelector("#desc").textContent = data.weather[0].description;
       document.querySelector("#weather").classList.remove("hidden");
     });
 }
