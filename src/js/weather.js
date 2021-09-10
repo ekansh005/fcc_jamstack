@@ -8,7 +8,7 @@ function success(position) {
     .then((data) => {
       //dom manipulation to update weather information
       document.querySelector("#area").textContent = data.name;
-      document.querySelector("#temp").textContent = (data.main.temp + " ") & deg;
+      document.querySelector("#temp").textContent = data.main.temp + " " + "\u00b0";
       +"C";
       document.querySelector("#condition").textContent = data.weather[0].main;
       document.querySelector("#desc").textContent = data.weather[0].description;
