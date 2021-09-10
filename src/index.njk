@@ -7,6 +7,13 @@ layout: base.njk
     <h1>Here is your page</h1>
     <div class="vibe">You are great!</div>
     <div class="love">❤</div>
+    <div id="weather" class="hidden">
+        <h2>The weather near you:</h2>
+        <p id="area"></p>
+        <p id="temp"></p>
+        <p id="condition"></p>
+        <p id="desc"></p>
+    </div>
     <ul>
     {% for article in news[0].articles %}
         <li>
@@ -17,3 +24,4 @@ layout: base.njk
     </ul>
 </div>
 <script src="/js/vibe.js"></script>
+<script src="/js/weather.js"></script>
